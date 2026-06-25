@@ -2,7 +2,7 @@ const rawApiBaseUrl =
   process.env.REACT_APP_API_BASE_URL || 'https://kcafe-backend.onrender.com';
 
 export const API_BASE_URL = rawApiBaseUrl.replace(/\/$/, '');
-export const API_TIMEOUT = 15000;
+export const API_TIMEOUT = 70000;
 const USER_KEY = 'user';
 
 export const getStoredUser = () => {
