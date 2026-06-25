@@ -294,9 +294,9 @@ const CustomerCategoryProductsPage = () => {
   };
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
-      <section style={styles.hero}>
+      <section className="kc-customer-hero" style={styles.hero}>
         <div style={styles.heroCard}>
           <h1 style={styles.heroTitle}>{category?.name || 'Chi tiết đồ uống'}</h1>
           <p style={styles.heroText}>
@@ -305,8 +305,8 @@ const CustomerCategoryProductsPage = () => {
         </div>
       </section>
 
-      <section style={styles.section}>
-        <div style={styles.searchWrap}>
+      <section className="kc-section" style={styles.section}>
+        <div className="kc-search-wrap" style={styles.searchWrap}>
           <div>
             <label style={styles.searchLabel}>Tìm kiếm sản phẩm theo tên</label>
             <input
@@ -324,9 +324,9 @@ const CustomerCategoryProductsPage = () => {
         {filteredProducts.length === 0 ? (
           <div style={styles.emptyState}>Không tìm thấy sản phẩm phù hợp với từ khóa bạn nhập.</div>
         ) : (
-          <div style={styles.grid}>
+          <div className="kc-product-grid" style={styles.grid}>
             {filteredProducts.map((product) => (
-            <article key={product.id} style={styles.card}>
+            <article className="kc-product-card" key={product.id} style={styles.card}>
               <button type="button" style={styles.visual} onClick={() => handlePreviewProduct(product)}>
                 {getProductImageUrl(product.image_url) && (
                   <>

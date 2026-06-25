@@ -252,7 +252,7 @@ const OrderAdminRed = () => {
 
       <form onSubmit={handleSubmit} style={styles.formCard}>
         <h3 style={{ marginTop: 0, color: '#6b1218' }}>{editingId ? 'Sửa đơn hàng' : 'Tạo đơn hàng mới'}</h3>
-        <div style={styles.grid}>
+        <div className="kc-form-grid" style={styles.grid}>
           <div style={styles.field}>
             <label style={styles.label}>Người đặt</label>
             <select value={form.userId} onChange={(e) => handleFormChange('userId', e.target.value)} style={styles.input}>
@@ -275,7 +275,7 @@ const OrderAdminRed = () => {
           </div>
           <div style={{ ...styles.field, ...styles.fullWidth }}>
             <label style={styles.label}>Bản đồ giao hàng</label>
-            <div style={styles.smallGrid}>
+            <div className="kc-small-grid" style={styles.smallGrid}>
               <input type="number" step="0.0000001" value={form.deliveryLatitude} onChange={(e) => handleFormChange('deliveryLatitude', e.target.value)} style={styles.input} placeholder="Vĩ độ" />
               <input type="number" step="0.0000001" value={form.deliveryLongitude} onChange={(e) => handleFormChange('deliveryLongitude', e.target.value)} style={styles.input} placeholder="Kinh độ" />
               <input type="number" step="0.01" value={form.deliveryDistanceKm} onChange={(e) => handleFormChange('deliveryDistanceKm', e.target.value)} style={styles.input} placeholder="Khoảng cách km" />
@@ -330,7 +330,7 @@ const OrderAdminRed = () => {
         </div>
       </form>
 
-      <div style={styles.metrics}>
+      <div className="kc-metrics-grid" style={styles.metrics}>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Tổng đơn hàng</div><div style={styles.metricValue}>{orders.length}</div></div>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Chờ xác nhận</div><div style={styles.metricValue}>{pendingCount}</div></div>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Đang xử lý</div><div style={styles.metricValue}>{processingCount}</div></div>
@@ -346,7 +346,7 @@ const OrderAdminRed = () => {
         </div>
       </div>
 
-      <div style={styles.cardList}>
+      <div className="kc-order-list" style={styles.cardList}>
         {filteredOrders.map((order) => (
           <article key={order.id} style={styles.orderCard}>
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', alignItems: 'start', flexWrap: 'wrap' }}>
@@ -374,7 +374,7 @@ const OrderAdminRed = () => {
               </div>
             </div>
 
-            <div style={styles.metaGrid}>
+            <div className="kc-meta-grid" style={styles.metaGrid}>
               <div style={styles.metaCard}>
                 <strong>Cổng thanh toán:</strong> {order.payment_transaction?.gateway || 'N/A'}
                 <br />

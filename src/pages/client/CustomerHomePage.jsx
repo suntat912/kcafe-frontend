@@ -321,7 +321,7 @@ const CustomerHomePage = () => {
   }, [bestSellerProducts]);
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
 
       <section style={styles.splitSection}>
@@ -357,7 +357,7 @@ const CustomerHomePage = () => {
             {sliderProducts.map((product, index) => {
               const imageUrl = getProductImageUrl(product.image_url);
               return (
-                <article key={`${product.id}-${index}`} style={styles.card} onClick={() => setActiveProduct(product)}>
+                <article className="kc-product-card" key={`${product.id}-${index}`} style={styles.card} onClick={() => setActiveProduct(product)}>
                   <div style={styles.cardImageWrap}>
                     {imageUrl ? <img src={imageUrl} alt={product.name} style={styles.cardImage} /> : null}
                     <div style={styles.cardOverlay} />

@@ -256,7 +256,7 @@ const CustomerPaymentPage = () => {
 
   if (!order) {
     return (
-      <div style={styles.page}>
+      <div className="kc-customer-page" style={styles.page}>
         <CustomerHeader />
       </div>
     );
@@ -265,11 +265,11 @@ const CustomerPaymentPage = () => {
   const isPaid = order.payment_status === 'paid';
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
 
-      <div style={styles.shell}>
-        <section style={styles.card}>
+      <div className="kc-payment-shell" style={styles.shell}>
+        <section className="kc-card" style={styles.card}>
           <h1 style={styles.title}>Thanh toán chuyển khoản</h1>
           <p style={styles.text}>
             Quét mã QR bên dưới để thanh toán đúng số tiền của đơn hàng. Hệ thống sẽ tự kiểm tra
@@ -328,7 +328,7 @@ const CustomerPaymentPage = () => {
           </button>
         </section>
 
-        <aside style={styles.card}>
+        <aside className="kc-card" style={styles.card}>
           <h2 style={{ margin: 0, color: '#6b1218', fontSize: '28px' }}>Chi tiết đơn hàng</h2>
           <p style={styles.text}>
             Đơn hàng #{order.id} đang ở trạng thái <strong>{order.status}</strong>.
@@ -377,7 +377,7 @@ const CustomerPaymentPage = () => {
             </button>
           ) : null}
 
-          <div style={styles.list}>
+          <div className="kc-payment-list" style={styles.list}>
             {(order.items || []).map((item) => (
               <div key={item.id || `${item.product_id}-${item.quantity}`} style={styles.item}>
                 <div>

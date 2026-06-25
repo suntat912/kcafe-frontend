@@ -449,7 +449,7 @@ const LoginRedPage = () => {
   };
 
   return (
-    <div style={styles.page}>
+    <div className="kc-login-page" style={styles.page}>
       <style>
         {`
           @keyframes loginLoading {
@@ -459,15 +459,15 @@ const LoginRedPage = () => {
           }
         `}
       </style>
-      <section style={styles.showcase}>
+      <section className="kc-login-showcase" style={styles.showcase}>
         <div>
           <div style={styles.brandBadge}>KC</div>
-          <h1 style={styles.showcaseTitle}>Hệ thống bán hàng K-COFFEE</h1>
-          <p style={styles.showcaseText}>
+          <h1 className="kc-login-title" style={styles.showcaseTitle}>Hệ thống bán hàng K-COFFEE</h1>
+          <p className="kc-login-copy" style={styles.showcaseText}>
             Khách hàng cần đăng nhập, đăng ký hoặc khôi phục mật khẩu để tiếp tục sử dụng dịch vụ mua sản phẩm bên K-COFFEE.
           </p>
 
-          <div style={styles.badgeRow}>
+          <div className="kc-login-badges" style={styles.badgeRow}>
             <span style={styles.badge}>Quản lý sản phẩm</span>
             <span style={styles.badge}>Theo dõi tồn kho</span>
             <span style={styles.badge}>Đặt hàng cho customer</span>
@@ -479,8 +479,8 @@ const LoginRedPage = () => {
         </div>
       </section>
 
-      <section style={styles.formPane}>
-        <div style={styles.card}>
+      <section className="kc-login-form-pane" style={styles.formPane}>
+        <div className="kc-login-card" style={styles.card}>
           <p style={styles.eyebrow}>Tài khoản hệ thống</p>
           <h2 style={styles.title}>
             {mode === 'login' ? 'Đăng nhập' : mode === 'register' ? 'Đăng ký' : 'Quên mật khẩu'}
@@ -499,7 +499,7 @@ const LoginRedPage = () => {
             </div>
           )}
 
-          <div style={styles.tabs}>
+          <div className="kc-login-tabs" style={styles.tabs}>
             <button type="button" onClick={() => switchMode('login')} disabled={isSubmitting || isSendingCode} style={mode === 'login' ? { ...styles.tab, ...styles.activeTab } : styles.tab}>
               Đăng nhập
             </button>

@@ -376,10 +376,10 @@ const menuItems = [
 
 const HomeRedPage = () => {
   return (
-    <div style={styles.page}>
-      <header style={styles.topbar}>
-        <div style={styles.brandWrap}>
-          <div style={styles.brandBadge}>
+    <div className="kc-home-page" style={styles.page}>
+      <header className="kc-home-topbar" style={styles.topbar}>
+        <div className="kc-home-brand-wrap" style={styles.brandWrap}>
+          <div className="kc-home-brand-badge" style={styles.brandBadge}>
             <img src={logoImage} alt="K-Coffee" style={styles.brandLogo} />
           </div>
           <div>
@@ -388,7 +388,7 @@ const HomeRedPage = () => {
           </div>
         </div>
 
-        <nav style={styles.nav}>
+        <nav className="kc-home-nav" style={styles.nav}>
           <a href="#menu" style={styles.navLink}>
             Thực đơn
           </a>
@@ -404,17 +404,17 @@ const HomeRedPage = () => {
         </nav>
       </header>
 
-      <section style={styles.hero}>
-        <div style={styles.heroFrame}>
-          <div style={styles.heroContent}>
+      <section className="kc-home-hero" style={styles.hero}>
+        <div className="kc-home-hero-frame" style={styles.heroFrame}>
+          <div className="kc-home-hero-content" style={styles.heroContent}>
             <div style={styles.heroEyebrow}>Thương hiệu cà phê Việt</div>
-            <h2 style={styles.heroTitle}>Đậm chất cà phê Việt, rõ thương hiệu, dễ nhớ ngay từ cái nhìn đầu</h2>
-            <p style={styles.heroText}>
+            <h2 className="kc-home-hero-title" style={styles.heroTitle}>Đậm chất cà phê Việt, rõ thương hiệu, dễ nhớ ngay từ cái nhìn đầu</h2>
+            <p className="kc-home-hero-text" style={styles.heroText}>
               Giao diện này theo hướng thương hiệu cà phê chuỗi: đỏ thương hiệu, hero lớn,
               thực đơn nổi bật và khối nội dung rõ để khách vãng lai xem nhanh mà không cần
               đăng nhập.
             </p>
-            <div style={styles.heroActions}>
+            <div className="kc-home-actions" style={styles.heroActions}>
               <a href="#menu" style={styles.primaryCta}>
                 Khám phá thực đơn
               </a>
@@ -424,16 +424,16 @@ const HomeRedPage = () => {
             </div>
           </div>
 
-          <div style={styles.heroRight}>
-            <div style={styles.heroMedia}>
-              <div style={{ ...styles.heroMediaMain, backgroundImage: `url(${heroImages.main})` }} />
-              <div style={styles.heroMediaStack}>
+          <div className="kc-home-hero-right" style={styles.heroRight}>
+            <div className="kc-home-hero-media" style={styles.heroMedia}>
+              <div className="kc-home-hero-media-main" style={{ ...styles.heroMediaMain, backgroundImage: `url(${heroImages.main})` }} />
+              <div className="kc-home-hero-media-stack" style={styles.heroMediaStack}>
                 <div style={{ ...styles.heroMediaSmall, backgroundImage: `url(${heroImages.sideTop})` }} />
                 <div style={{ ...styles.heroMediaSmall, backgroundImage: `url(${heroImages.sideBottom})` }} />
               </div>
             </div>
 
-            <div style={styles.heroPanel}>
+            <div className="kc-home-hero-panel" style={styles.heroPanel}>
               <div style={styles.panelLabel}>Thông tin cửa hàng</div>
               <h3 style={styles.panelTitle}>Mở cửa mỗi ngày</h3>
               <p style={styles.panelText}>
@@ -445,8 +445,8 @@ const HomeRedPage = () => {
         </div>
       </section>
 
-      <section style={styles.section}>
-        <div style={styles.grid3}>
+      <section className="kc-section" style={styles.section}>
+        <div className="kc-grid-3" style={styles.grid3}>
           {featureCards.map((item) => (
             <article key={item.id} style={styles.card}>
               <div style={styles.cardIndex}>{item.id}</div>
@@ -457,8 +457,8 @@ const HomeRedPage = () => {
         </div>
       </section>
 
-      <section id="menu" style={styles.section}>
-        <div style={styles.sectionHead}>
+      <section id="menu" className="kc-section" style={styles.section}>
+        <div className="kc-section-head" style={styles.sectionHead}>
           <div>
             <h2 style={styles.sectionTitle}>Menu nổi bật</h2>
             <p style={styles.sectionDesc}>
@@ -468,7 +468,7 @@ const HomeRedPage = () => {
           </div>
         </div>
 
-        <div style={styles.menuGrid}>
+        <div className="kc-menu-grid" style={styles.menuGrid}>
           {menuItems.map((item) => (
             <article key={item.name} style={styles.menuCard}>
               <div style={{ ...styles.menuVisual, background: item.visual }}>{item.tag}</div>
@@ -485,10 +485,10 @@ const HomeRedPage = () => {
         </div>
       </section>
 
-      <section id="story" style={styles.section}>
-        <div style={styles.storyBand}>
-          <div style={styles.storyVisual} />
-          <div style={styles.storyCopy}>
+      <section id="story" className="kc-section" style={styles.section}>
+        <div className="kc-story-band" style={styles.storyBand}>
+          <div className="kc-story-visual" style={styles.storyVisual} />
+          <div className="kc-story-copy" style={styles.storyCopy}>
             <div style={{ ...styles.heroEyebrow, marginBottom: '16px' }}>Về K-CAFE</div>
             <h2 style={{ margin: '0 0 16px', fontSize: '38px', lineHeight: 1.14 }}>
               Không gian cho khách ghé nhanh, ngồi lâu, hoặc hẹn gặp nhẹ vào cuối ngày
@@ -501,7 +501,7 @@ const HomeRedPage = () => {
         </div>
       </section>
 
-      <section id="visit" style={styles.section}>
+      <section id="visit" className="kc-section" style={styles.section}>
         <div style={{ ...styles.card, backgroundColor: '#6b1218', color: '#fff3e8' }}>
           <div style={styles.sectionHead}>
             <div>
@@ -517,7 +517,7 @@ const HomeRedPage = () => {
         </div>
       </section>
 
-      <footer style={styles.footer}>
+      <footer className="kc-home-footer" style={styles.footer}>
         <span>Trang giới thiệu thương hiệu K-CAFE</span>
         <span>Bảng màu: đỏ rượu vang, kem, caramel</span>
       </footer>

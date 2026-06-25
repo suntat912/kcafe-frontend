@@ -142,7 +142,7 @@ const PieChartCard = ({ title, items, currency = false }) => {
     <section style={styles.chartCard}>
       <h3 style={styles.chartTitle}>{title}</h3>
       {items.length ? (
-        <div style={styles.chartWrap}>
+        <div className="kc-chart-wrap" style={styles.chartWrap}>
           <div style={{ ...styles.donut, background: buildConic(items) }}>
             <div style={styles.donutHole}>
               <div>
@@ -220,7 +220,7 @@ const AdminDashboardPage = () => {
         <h2 style={styles.title}>Báo cáo doanh thu</h2>
       </div>
 
-      <div style={styles.metrics}>
+      <div className="kc-metrics-grid" style={styles.metrics}>
         <div style={styles.metricCard}>
           <div style={styles.metricLabel}>Tổng đơn hàng</div>
           <div style={styles.metricValue}>{stats?.total_orders || 0}</div>

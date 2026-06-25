@@ -213,9 +213,9 @@ const CustomerOrderHistoryPage = () => {
   const paidOrders = useMemo(() => orders.filter((item) => item.payment_status === 'paid').length, [orders]);
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
-      <section style={styles.shell}>
+      <section className="kc-order-shell" style={styles.shell}>
         <div style={styles.header}>
           <h1 style={styles.title}>Lịch sử đơn hàng</h1>
           <p style={styles.text}>
@@ -224,7 +224,7 @@ const CustomerOrderHistoryPage = () => {
           </p>
         </div>
 
-        <div style={styles.metrics}>
+        <div className="kc-metrics-grid" style={styles.metrics}>
           <div style={styles.metricCard}>
             <div style={styles.metricLabel}>Tổng đơn hàng</div>
             <div style={styles.metricValue}>{orders.length}</div>
@@ -250,9 +250,9 @@ const CustomerOrderHistoryPage = () => {
         {orders.length === 0 ? (
           <div style={styles.empty}>Bạn chưa có đơn hàng nào. Hãy chọn vài món và bắt đầu đặt hàng.</div>
         ) : (
-          <div style={styles.list}>
+          <div className="kc-order-list" style={styles.list}>
             {orders.map((order) => (
-              <article key={order.id} style={styles.card}>
+              <article className="kc-card" key={order.id} style={styles.card}>
                 <div style={styles.cardHead}>
                   <div>
                     <h2 style={styles.orderTitle}>Đơn hàng #{order.id}</h2>

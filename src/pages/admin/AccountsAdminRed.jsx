@@ -170,7 +170,7 @@ const AccountsAdminRed = () => {
         <h3 style={styles.formTitle}>{editingId ? 'Sửa tài khoản' : 'Thêm tài khoản mới'}</h3>
         <p style={styles.formDesc}>{editingId ? 'Cập nhật thông tin tài khoản đang chọn. Email sẽ được kiểm tra trùng trước khi lưu.' : 'Nhập đầy đủ thông tin để tạo tài khoản admin hoặc customer mới.'}</p>
 
-        <div style={styles.formGrid}>
+        <div className="kc-form-grid" style={styles.formGrid}>
           <div style={styles.inputWrap}>
             <label style={styles.label}>Họ tên</label>
             <input type="text" value={form.fullName} onChange={(e) => handleFormChange('fullName', e.target.value)} style={styles.input} placeholder="Nguyễn Văn A" />
@@ -217,7 +217,7 @@ const AccountsAdminRed = () => {
         </div>
       </div>
 
-      <div style={styles.grid}>
+      <div className="kc-admin-grid" style={styles.grid}>
         {filteredAccounts.map((account) => (
           <article key={account.id} style={styles.card}>
             <div style={styles.row}>

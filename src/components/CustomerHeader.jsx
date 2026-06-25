@@ -187,13 +187,13 @@ const CustomerHeader = () => {
 
   return (
     <>
-      <header style={styles.header}>
-        <div style={styles.left}>
-          <NavLink to="/customer/home" style={styles.brand}>
+      <header className="kc-customer-header" style={styles.header}>
+        <div className="kc-customer-header-left" style={styles.left}>
+          <NavLink className="kc-customer-brand" to="/customer/home" style={styles.brand}>
             <img src={logoImage} alt="K-Coffee" style={styles.brandLogo} />
           </NavLink>
 
-          <nav style={styles.nav}>
+          <nav className="kc-customer-nav" style={styles.nav}>
             {renderNavLink('/customer/home', 'Trang chủ')}
             {renderNavLink('/customer/drinks', 'Đồ uống')}
             {renderNavLink('/customer/services', 'Dịch vụ')}
@@ -201,13 +201,13 @@ const CustomerHeader = () => {
           </nav>
         </div>
 
-        <div style={styles.right}>
-          <NavLink to="/customer/cart" style={styles.actionPill}>
+        <div className="kc-customer-actions" style={styles.right}>
+          <NavLink className="kc-customer-pill" to="/customer/cart" style={styles.actionPill}>
             <span>Giỏ hàng</span>
             <span style={styles.cartBadge}>{cartCount}</span>
           </NavLink>
 
-          <NavLink to="/customer/profile" style={styles.userPill}>
+          <NavLink className="kc-customer-pill kc-customer-user-pill" to="/customer/profile" style={styles.userPill}>
             <div style={styles.avatar}>
               {avatarUrl && !imageBroken ? (
                 <img
@@ -223,7 +223,7 @@ const CustomerHeader = () => {
             <span>{user?.full_name || 'Tài khoản'}</span>
           </NavLink>
 
-          <button type="button" onClick={handleLogout} style={styles.logoutButton}>
+          <button className="kc-customer-pill" type="button" onClick={handleLogout} style={styles.logoutButton}>
             Đăng xuất
           </button>
         </div>

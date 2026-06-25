@@ -11,3 +11,276 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@media (max-width: 900px) {
+  .kc-login-page {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    background: linear-gradient(180deg, #6b1218 0%, #8f2e26 38%, #f7efe5 38%, #f7efe5 100%) !important;
+  }
+
+  .kc-login-showcase {
+    min-height: auto !important;
+    padding: 28px 20px 18px !important;
+    gap: 18px !important;
+  }
+
+  .kc-login-title {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+    margin-top: 18px !important;
+  }
+
+  .kc-login-copy {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  .kc-login-badges {
+    gap: 8px !important;
+  }
+
+  .kc-login-form-pane {
+    padding: 18px 16px 28px !important;
+    place-items: stretch !important;
+  }
+
+  .kc-login-card {
+    max-width: none !important;
+    border-radius: 22px !important;
+    padding: 24px 18px !important;
+  }
+
+  .kc-login-tabs {
+    gap: 8px !important;
+  }
+
+  .kc-home-topbar,
+  .kc-customer-header {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 14px 16px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+
+  .kc-home-brand-wrap,
+  .kc-customer-header-left {
+    width: 100% !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .kc-home-brand-badge,
+  .kc-customer-brand,
+  .kc-admin-brand-badge {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .kc-home-nav,
+  .kc-customer-nav,
+  .kc-customer-actions {
+    width: 100% !important;
+    display: flex !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 4px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kc-home-nav a,
+  .kc-customer-nav a,
+  .kc-customer-pill {
+    flex: 0 0 auto !important;
+    min-height: 42px !important;
+    padding: 10px 12px !important;
+    white-space: nowrap !important;
+  }
+
+  .kc-customer-user-pill span:last-child {
+    max-width: 130px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .kc-home-hero,
+  .kc-section,
+  .kc-order-shell {
+    padding: 20px 16px 0 !important;
+  }
+
+  .kc-home-hero-frame {
+    min-height: auto !important;
+    border-radius: 22px !important;
+    padding: 24px 18px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-home-hero-content {
+    padding: 0 !important;
+  }
+
+  .kc-home-hero-title {
+    font-size: 34px !important;
+    line-height: 1.12 !important;
+  }
+
+  .kc-home-hero-text {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  .kc-home-actions a {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .kc-home-hero-media,
+  .kc-story-band,
+  .kc-cart-shell,
+  .kc-payment-shell {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-home-hero-media-main,
+  .kc-story-visual {
+    min-height: 240px !important;
+  }
+
+  .kc-home-hero-media-stack {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .kc-grid-3,
+  .kc-menu-grid,
+  .kc-product-grid,
+  .kc-admin-grid,
+  .kc-form-grid,
+  .kc-small-grid,
+  .kc-metrics-grid,
+  .kc-meta-grid,
+  .kc-location-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-section-head {
+    display: block !important;
+  }
+
+  .kc-card,
+  .kc-product-card {
+    border-radius: 20px !important;
+    padding: 18px !important;
+  }
+
+  .kc-search-wrap,
+  .kc-discount-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-cart-item {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-cart-item-visual {
+    min-height: 190px !important;
+  }
+
+  .kc-cart-item-body {
+    padding: 16px !important;
+  }
+
+  .kc-cart-item-head {
+    display: block !important;
+  }
+
+  .kc-admin-shell {
+    display: block !important;
+  }
+
+  .kc-admin-sidebar {
+    width: 100% !important;
+    padding: 14px 12px !important;
+    border-right: 0 !important;
+  }
+
+  .kc-admin-brand-link {
+    gap: 10px !important;
+  }
+
+  .kc-admin-nav {
+    display: flex !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    padding-bottom: 4px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kc-admin-nav-link {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 11px 12px !important;
+  }
+
+  .kc-admin-topbar {
+    padding: 14px 16px !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .kc-admin-title {
+    font-size: 24px !important;
+  }
+
+  .kc-admin-content {
+    padding: 16px !important;
+  }
+
+  .kc-chart-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-home-footer {
+    padding: 24px 16px 32px !important;
+  }
+
+  h1,
+  h2 {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 520px) {
+  .kc-home-hero-media-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kc-login-card input,
+  .kc-login-card button,
+  .kc-card input,
+  .kc-card button,
+  .kc-card select,
+  .kc-card textarea {
+    width: 100% !important;
+  }
+}

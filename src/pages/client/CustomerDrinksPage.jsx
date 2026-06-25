@@ -116,9 +116,9 @@ const CustomerDrinksPage = () => {
   })), [categories, products]);
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
-      <section style={styles.hero}>
+      <section className="kc-customer-hero" style={styles.hero}>
         <div style={styles.heroCard}>
           <h1 style={styles.heroTitle}>Đồ uống</h1>
           <p style={styles.heroText}>
@@ -127,10 +127,10 @@ const CustomerDrinksPage = () => {
         </div>
       </section>
 
-      <section style={styles.section}>
-        <div style={styles.grid}>
+      <section className="kc-section" style={styles.section}>
+        <div className="kc-product-grid" style={styles.grid}>
           {categoriesWithCounts.map((category) => (
-            <article key={category.id} style={styles.card}>
+            <article className="kc-product-card" key={category.id} style={styles.card}>
               <div style={styles.cardVisual}>{category.name}</div>
               <div style={styles.body}>
                 <h2 style={styles.title}>{category.name}</h2>

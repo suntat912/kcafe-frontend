@@ -203,7 +203,7 @@ const ProductAdminRed = () => {
 
       <form onSubmit={handleSubmit} style={styles.formCard}>
         <h3 style={{ marginTop: 0, color: '#6b1218' }}>{editingId ? 'Sửa sản phẩm' : 'Thêm sản phẩm mới'}</h3>
-        <div style={styles.formGrid}>
+        <div className="kc-form-grid" style={styles.formGrid}>
           <div style={styles.field}>
             <label style={styles.label}>Danh mục</label>
             <select value={form.categoryId} onChange={(e) => handleChange('categoryId', e.target.value)} style={styles.input}>
@@ -256,7 +256,7 @@ const ProductAdminRed = () => {
         </div>
       </form>
 
-      <div style={styles.metrics}>
+      <div className="kc-metrics-grid" style={styles.metrics}>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Tổng sản phẩm</div><div style={styles.metricValue}>{products.length}</div></div>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Đang kinh doanh</div><div style={styles.metricValue}>{activeCount}</div></div>
         <div style={styles.metricCard}><div style={styles.metricLabel}>Sắp hết hàng</div><div style={styles.metricValue}>{lowStockCount}</div></div>

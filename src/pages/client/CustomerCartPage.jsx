@@ -371,11 +371,11 @@ const CustomerCartPage = () => {
   };
 
   return (
-    <div style={styles.page}>
+    <div className="kc-customer-page" style={styles.page}>
       <CustomerHeader />
 
-      <div style={styles.shell}>
-        <section style={styles.card}>
+      <div className="kc-cart-shell" style={styles.shell}>
+        <section className="kc-card" style={styles.card}>
           <h1 style={styles.title}>Giỏ hàng của bạn</h1>
           <p style={styles.text}>
             Kiểm tra lại các món đã chọn, thay đổi số lượng nhanh và xem tổng tiền trước khi
@@ -392,18 +392,18 @@ const CustomerCartPage = () => {
               </div>
             </div>
           ) : (
-            <div style={styles.list}>
+            <div className="kc-cart-list" style={styles.list}>
               {cartItems.map((item) => (
-                <article key={item.productId} style={styles.itemCard}>
-                  <div style={styles.itemVisual}>
+                <article className="kc-cart-item" key={item.productId} style={styles.itemCard}>
+                  <div className="kc-cart-item-visual" style={styles.itemVisual}>
                     {getProductImageUrl(item.imageUrl) ? (
                       <img src={getProductImageUrl(item.imageUrl)} alt={item.name} style={styles.itemImage} />
                     ) : (
                       <div style={styles.itemVisualLabel}>{item.name}</div>
                     )}
                   </div>
-                  <div style={styles.itemBody}>
-                    <div style={styles.itemHead}>
+                  <div className="kc-cart-item-body" style={styles.itemBody}>
+                    <div className="kc-cart-item-head" style={styles.itemHead}>
                       <div>
                         <h3 style={styles.itemName}>{item.name}</h3>
                         <span style={styles.tag}>{item.categoryName || 'K-CAFE'}</span>
@@ -447,7 +447,7 @@ const CustomerCartPage = () => {
           )}
         </section>
 
-        <aside style={styles.card}>
+        <aside className="kc-card kc-cart-summary" style={styles.card}>
           <h2 style={styles.summaryTitle}>Tóm tắt đơn hàng</h2>
           <div style={styles.summaryBlock}>
             <div style={styles.summaryRow}>
@@ -501,7 +501,7 @@ const CustomerCartPage = () => {
             <button type="button" style={styles.secondaryButton} onClick={handleUseCurrentLocation}>
               Lấy vị trí hiện tại
             </button>
-            <div style={styles.locationGrid}>
+            <div className="kc-location-grid" style={styles.locationGrid}>
               <input
                 type="number"
                 step="0.0000001"
@@ -561,7 +561,7 @@ const CustomerCartPage = () => {
 
           <div style={styles.field}>
             <label style={styles.label}>Mã giảm giá</label>
-            <div style={styles.discountRow}>
+            <div className="kc-discount-row" style={styles.discountRow}>
               <input
                 value={discountCode}
                 onChange={(e) => setDiscountCode(e.target.value.toUpperCase())}

@@ -132,7 +132,7 @@ const CategoryAdminRed = () => {
         </div>
       </div>
 
-      <div style={styles.grid}>
+      <div className="kc-admin-grid" style={styles.grid}>
         {filteredCategories.map((item) => (
           <article key={item.id} style={styles.card}>
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', alignItems: 'start' }}>

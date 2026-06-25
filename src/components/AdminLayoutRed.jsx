@@ -112,11 +112,11 @@ const navItems = [
 
 const AdminLayoutRed = ({ title, children }) => {
   return (
-    <div style={styles.shell}>
-      <aside style={styles.sidebar}>
+    <div className="kc-admin-shell" style={styles.shell}>
+      <aside className="kc-admin-sidebar" style={styles.sidebar}>
         <div style={styles.brand}>
-          <Link to="/admin/products" style={styles.brandLink}>
-            <div style={styles.brandBadge}>
+          <Link className="kc-admin-brand-link" to="/admin/products" style={styles.brandLink}>
+            <div className="kc-admin-brand-badge" style={styles.brandBadge}>
               <img src={logoImage} alt="K-Coffee" style={styles.brandLogo} />
             </div>
             <div>
@@ -126,11 +126,12 @@ const AdminLayoutRed = ({ title, children }) => {
           </Link>
         </div>
 
-        <div style={styles.nav}>
+        <div className="kc-admin-nav" style={styles.nav}>
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
+              className="kc-admin-nav-link"
               style={({ isActive }) => (isActive ? { ...styles.navLink, ...styles.navLinkActive } : styles.navLink)}
             >
               {item.label}
@@ -139,12 +140,12 @@ const AdminLayoutRed = ({ title, children }) => {
         </div>
       </aside>
 
-      <main style={styles.main}>
-        <div style={styles.topbar}>
-          <h1 style={styles.title}>{title}</h1>
+      <main className="kc-admin-main" style={styles.main}>
+        <div className="kc-admin-topbar" style={styles.topbar}>
+          <h1 className="kc-admin-title" style={styles.title}>{title}</h1>
           <UserIdentityBadge profilePath="/admin/profile" />
         </div>
-        <div style={styles.content}>{children}</div>
+        <div className="kc-admin-content" style={styles.content}>{children}</div>
       </main>
     </div>
   );
