@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import { API_BASE_URL, getAvatarUrl, getStoredUser, getUserInitials, storeUser } from '../utils/userSession';
 import NotificationModal from './NotificationModal';
